@@ -311,6 +311,7 @@ function despliegueexplorar() {
         var hr = document.getElementById("hr");
         var footer=document.getElementById("footer");
         var todosapuntes=document.getElementById("todosapuntes")
+        var titulotodosapuntes=document.getElementById("titulotodosapuntes")
 
 
         menulateral.style.display = "block";
@@ -320,6 +321,7 @@ function despliegueexplorar() {
         hr.style.width="82%"
         footer.style.width="110%";
         todosapuntes.style.marginLeft="15%"
+        titulotodosapuntes.style.marginLeft="56%";
 
 
         flaglateral = true;
@@ -334,6 +336,7 @@ function despliegueexplorar() {
         var hr = document.getElementById("hr");
         var footer=document.getElementById("footer");
         var todosapuntes=document.getElementById("todosapuntes")
+        var titulotodosapuntes=document.getElementById("titulotodosapuntes")
 
 
         menulateral.style.display = "none";
@@ -342,7 +345,9 @@ function despliegueexplorar() {
         hr.style.marginLeft = "2%";
         hr.style.width="97%"
         footer.style.width="100%";
-        todosapuntes.style.marginLeft="0%"
+        todosapuntes.style.marginLeft="0%";
+        titulotodosapuntes.style.marginLeft="41%"
+
 
 
 
@@ -445,4 +450,46 @@ function hoveroutsubirsvg(){
     subirapuntes.style.textDecoration="none"
     subirapuntes.style.color="rgb(101, 83, 255)"
     upload.style.color="rgb(101, 83, 255)"
+}
+
+function busqueda()
+{
+    var box=document.getElementsByClassName("cajita");
+    var textbusq=document.getElementById("buscar").value;
+
+    for(var i=0;i<=box.length;i++)
+    {
+        var title=box[i].children[1].children[0].innerHTML.replace('Á','A').replace('É','E').replace('Í','I').replace('Ó','O').replace('Ú','U');
+        var titleorig=box[i].children[1].children[0].innerHTML;
+
+        if(title.includes(textbusq.toUpperCase()) || titleorig.includes(textbusq.toUpperCase()))
+        {
+                box[i].style.display="block";
+        }
+        else if(title.includes(textbusq.toUpperCase())==false || titleorig.includes(textbusq.toUpperCase()) == false)
+        {
+            box[i].style.display="none";
+        }
+    }
+}
+
+function busquedatodo()
+{
+    var box=document.getElementsByClassName("cajitatodo");
+    var textbusq=document.getElementById("buscar").value;
+
+    for(var i=0;i<=box.length;i++)
+    {
+        var title=box[i].children[1].children[0].innerHTML.replace('Á','A').replace('É','E').replace('Í','I').replace('Ó','O').replace('Ú','U');
+        var titleorig=box[i].children[1].children[0].innerHTML;
+
+        if(title.includes(textbusq.toUpperCase()) || titleorig.includes(textbusq.toUpperCase()))
+        {
+                box[i].style.display="block";
+        }
+        else if(title.includes(textbusq.toUpperCase())==false || titleorig.includes(textbusq.toUpperCase()) == false)
+        {
+            box[i].style.display="none";
+        }
+    }
 }

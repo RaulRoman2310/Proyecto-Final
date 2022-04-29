@@ -522,7 +522,7 @@ a{
 }
 
 #titulotodosapuntes{
-    margin-left: 37%;
+    margin-left: 41%;
     font-family: 'Oswald', sans-serif;
     font-size: 300%;
     color: rgb(101, 83, 255);
@@ -570,7 +570,7 @@ a{
 .titulocaja
 {
     font-family: 'Oswald', sans-serif; 
-    font-size: 140%;
+    font-size: 120%;
     text-align: center;
     margin-top:2%;
     background-color: transparent;
@@ -679,6 +679,17 @@ a{
     color: red;
 }
 
+.downloadapuntes{
+    background-color: transparent;
+    margin-left: 13%;
+    margin-top:4%;
+    cursor: pointer;
+}
+
+.downloadapuntes:hover{
+color: rgb(21, 255, 0);
+}
+
 #tituloasignaturas{
     margin-left: 13%;
     font-family: 'Oswald', sans-serif;
@@ -716,7 +727,7 @@ a{
 
 #partetitulo{
     display: flex;
-    margin-bottom: 5%;
+    margin-bottom: -2%;
 }
 
 #subirapuntes{
