@@ -21,22 +21,28 @@
 
 <body onload="iniciado()">
     <div id="header">
-        <svg onclick="despliegue()" id="aside" xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
-            class="bi bi-grip-horizontal" viewBox="0 0 16 16">
+        <svg onclick="despliegue()" id="aside" xmlns="http://www.w3.org/2000/svg" width="35" height="35"
+            fill="currentColor" class="bi bi-grip-horizontal" viewBox="0 0 16 16">
             <path
-            d="M2 8a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm0-3a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm3 3a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm0-3a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm3 3a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm0-3a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm3 3a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm0-3a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm3 3a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm0-3a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                d="M2 8a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm0-3a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm3 3a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm0-3a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm3 3a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm0-3a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm3 3a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm0-3a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm3 3a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm0-3a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
         </svg>
-        <h1 id="logo">NoteSite</h1>
+        <h1 id="logo" onclick="inicio()">NoteSite</h1>
         <input type="text" id="buscar" onkeyup="busqueda()" placeholder="Buscar en NoteSite">
-        <svg onclick="buscar()" id="lupa" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+        <svg onclick="buscar()" id="lupa" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+            class="bi bi-search" viewBox="0 0 16 16">
+            <path
+                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
         </svg>
-        <button id="registrar" onclick="iniciarSesion()" >
+        <button id="cerrarsesion" onclick="cerrarsesion()">
+            <p>Cerrar sesión</p>
+        </button>
+        <button id="registrar" onclick="iniciarSesion()">
             <p>Regístrate</p>
         </button>
         <button id="perfil" onclick="verPerfil()" style="display: none;">
-            <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
-                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+            <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" fill="currentColor" class="bi bi-person-fill"
+                viewBox="0 0 16 16">
+                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
             </svg>
         </button>
     </div>
@@ -48,8 +54,8 @@
         <hr class="hrlateral">
         <p onclick="grupos()">Grupos</p>
         <hr class="hrlateral">
-        <p onclick="cerrarsesion()">Cambiar perfil</p>
-    
+        <p onclick="explorar()">Explorar</p>
+
     </div>
 
     <hr id="hr">
@@ -58,7 +64,7 @@
         <h3>Lo poco que he aprendido carece de valor, comparado con lo que ignoro y no desespero en aprender</h3>
         <img src="logonotesite.jpg">
     </div>
-    
+
     <div id="consejos">
         <h4>Todo lo que necesitas para mejorar tus calificaciones</h4>
         <div id="contenidoarriba">
@@ -94,16 +100,33 @@
     </div>
     <div id="formularioregis" style="display: none;">
         <h5>REGISTRO</h5>
-        <form method="POST">
-            <input type="text" class="form" id="nombre" placeholder="Nombre">
-            <input type="text" class="form" id="apellidos" placeholder="Apellidos">
-            <input type="text" class="form" id="email" placeholder="Email">
-            <input type="password" class="form" id="contraseña" placeholder="Contraseña">
-            <input type="date" class="form" id="fechanac" placeholder="Fecha de nacimiento">
-            <p id="login" onclick="formularioInicio()">¿Ya tienes cuenta? Inicia sesión</p>
-            <button type="button" id="boton" onclick="Registro()">Registrar</button>
-            <button type="button" id="botonvolver" onclick="volver()">Volver</button>
-        </form>
+        <input type="text" class="form" id="nombre" placeholder="Nombre">
+        <input type="text" class="form" id="apellidos" placeholder="Apellidos">
+        <input type="text" class="form" id="email" placeholder="Email">
+        <input type="password" class="form" id="contraseña" placeholder="Contraseña">
+        <input type="date" class="form" id="fechanac" placeholder="Fecha de nacimiento">
+        <select name="curso" id="formselect" placeholder="Curso">
+
+            <option disabled selected>Selecciona tu curso</option>
+
+            <option>1º ESO</option>
+
+            <option>2º ESO</option>
+
+            <option>3º ESO</option>
+
+            <option>4º ESO</option>
+
+            <option>1º Bachillerato</option>
+
+            <option>2º Bachillerato</option>
+
+        </select>
+
+        <p id="login" onclick="formularioInicio()">¿Ya tienes cuenta? Inicia sesión</p>
+        <button type="button" id="boton" onclick="registro()">Registrar</button>
+        <button type="button" id="botonvolver" onclick="volver()">Volver</button>
+
     </div>
 
     <div id="formularioinicio" style="display: none;">
@@ -115,32 +138,85 @@
         <button type="button" id="botonvolver" onclick="volverInicio()">Volver</button>
     </div>
     <div id="homeapuntes" style="display: none;">
-    <h3 id="tituloapuntes">TUS APUNTES</h3>
-    <div id="apuntesbox">
-        <div class="cajita" id="cajita1">
-            <img src="isabel2.jpeg" class="imagencaja">
-            <p class="titulocaja">HISTORIA 2ºBACH ISABEL II</p>
+        <div id="partetitulo">
+            <h3 id="tituloapuntes">TUS APUNTES</h3>
+            <svg onmouseover="hoversubirsvg()" onmouseout="hoveroutsubirsvg()" id="upload" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-upload" viewBox="0 0 16 16">
+                <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+                <path d="M7.646 1.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 2.707V11.5a.5.5 0 0 1-1 0V2.707L5.354 4.854a.5.5 0 1 1-.708-.708l3-3z"/>
+              </svg>
+            <p id="subirapuntes" onmouseover="hoversubirp()" onmouseout="hoveroutsubirp()">Subir más apuntes</p>
         </div>
-        <div class="cajita" id="cajita2">
-            <img src="isabel2.jpeg" class="imagencaja">
-            <p class="titulocaja">HISTORIA 2ºBACH ISABEL II</p>
-        </div>
-        <div class="cajita" id="cajita3">
-            <img src="isabel2.jpeg" class="imagencaja">
-            <p class="titulocaja">HISTORIA 2ºBACH ISABEL II</p>
-        </div>
-        <div class="cajita" id="cajita4">
-            <img src="isabel2.jpeg" class="imagencaja">
-            <p class="titulocaja">HISTORIA 2ºBACH ISABEL II</p>
-        </div>
-        <div class="cajita" id="cajita4">
-            <img src="isabel2.jpeg" class="imagencaja">
-            <p class="titulocaja">HISTORIA 2ºBACH ISABEL II</p>
+        <div id="apuntesbox">
+            <div class="cajita" id="cajita1">
+                <img src="isabel2.jpeg" class="imagencaja">
+                <div class="interior">
+                    <p class="titulocaja">HISTORIA 2ºBACH ISABEL II</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="papeleraapuntes" width="25" height="25"
+                        fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                        <path
+                            d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+                        <path fill-rule="evenodd"
+                            d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
+                    </svg>
+                </div>
+
+            </div>
+            <div class="cajita" id="cajita2">
+                <img src="isabel2.jpeg" class="imagencaja">
+                <div class="interior">
+                    <p class="titulocaja">HISTORIA 2ºBACH ISABEL II</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="papeleraapuntes" width="25" height="25"
+                        fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                        <path
+                            d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+                        <path fill-rule="evenodd"
+                            d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
+                    </svg>
+                </div>
+            </div>
+            <div class="cajita" id="cajita3">
+                <img src="isabel2.jpeg" class="imagencaja">
+                <div class="interior">
+                    <p class="titulocaja">HISTORIA 2ºBACH ISABEL II</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="papeleraapuntes" width="25" height="25"
+                        fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                        <path
+                            d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+                        <path fill-rule="evenodd"
+                            d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
+                    </svg>
+                </div>
+            </div>
+            <div class="cajita" id="cajita4">
+                <img src="isabel2.jpeg" class="imagencaja">
+                <div class="interior">
+                    <p class="titulocaja">HISTORIA 2ºBACH ISABEL II</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="papeleraapuntes" width="25" height="25"
+                        fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                        <path
+                            d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+                        <path fill-rule="evenodd"
+                            d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
+                    </svg>
+                </div>
+            </div>
+            <div class="cajita" id="cajita5">
+                <img src="isabel2.jpeg" class="imagencaja">
+                <div class="interior">
+                    <p class="titulocaja">HISTORIA 2ºBACH ISABEL II</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="papeleraapuntes" width="25" height="25"
+                        fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                        <path
+                            d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+                        <path fill-rule="evenodd"
+                            d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
+                    </svg>
+                </div>
+            </div>
         </div>
     </div>
-</div>
 
-    <footer class="footer">
+    <footer id="footer">
         <p id="empresa">Notesite © 2022
             <br>
             Grupo de estudiantes DAW
@@ -164,7 +240,6 @@
         </p>
     </footer>
     <script src="scriptiniciar.js"></script>
-    <script src="Ajax.js"></script>
 </body>
 
 </html>
