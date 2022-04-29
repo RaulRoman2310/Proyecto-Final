@@ -23,7 +23,7 @@ public class UsuarioController {
 	public String procAlta(@RequestBody Usuario usu) {
 		
 		if(userv.altausuario(usu)==1){
-			return "Usuario Registrado";
+			return "Usuario Registrado con exito";
 		}else {
 			return "Fallo al registrar";
 		}
