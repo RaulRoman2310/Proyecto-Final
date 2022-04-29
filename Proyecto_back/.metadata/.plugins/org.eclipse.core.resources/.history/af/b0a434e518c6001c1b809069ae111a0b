@@ -1,0 +1,29 @@
+package ifp.note.controller;
+
+import ifp.note.model.beans.Usuario;
+
+public class UsuarioController {
+	
+	@Autowired
+	private UsuarioServices userv;
+	
+	@PostMapping("/login")
+	public String procAlta(@RequestBody Usuario usu) {
+		
+		if(userv.altausuario(usu)==1){
+			return "Usuario Registrado";
+		}else {
+			return "Fallo al registrar";
+		}
+	}
+	
+	@PutMapping("/editarU")
+	public String procEdit(@RequestBody Usuario usu) {
+		
+		if(userv.modificarDatosUsu(usu)==1) {
+			return "Modificacion exitosatamente";
+		}else {
+			return "Error en modificar";
+		}
+	}
+}

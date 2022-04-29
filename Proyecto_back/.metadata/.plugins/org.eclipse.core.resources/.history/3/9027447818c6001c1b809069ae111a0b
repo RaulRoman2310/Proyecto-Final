@@ -1,0 +1,5 @@
+package ifp.note.model.dao;
+
+public interface UsuarioService {
+
+}

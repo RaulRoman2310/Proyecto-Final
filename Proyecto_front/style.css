@@ -1,0 +1,470 @@
+
+*
+{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(226, 226, 226);   
+}
+
+
+
+
+a{
+    text-decoration: none;
+}
+#header{
+    display: flex;
+    margin-top: 0.5%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+#aside{
+    margin-top: 1.5%;
+    cursor: pointer;
+}
+
+#logo{
+    font-family: 'Oswald', sans-serif;
+    color: rgb(40, 18, 238);
+    margin-left: 6%;
+    font-size: 50px; 
+    cursor: pointer; 
+}
+
+#buscar{
+    width: 30%;
+    height: 40px;
+    font-size: 18px;
+    color: black;
+    outline:none;
+    border: 1px solid silver;
+    border-radius: 30px;
+    background-color: white;
+    margin-left: 15%;
+    margin-top: 1%;
+    padding-left: 0.8%;
+}
+
+#lupa{
+    background-color: transparent;
+    margin-top: 1.4%;
+    margin-left: 1%;
+    cursor: pointer;
+}
+
+#registrar{
+    width: 200px;
+    height: 70px;
+    background-color: rgb(40, 18, 238);
+    border: 1px solid black;
+    border-radius: 20px;
+    margin-left: 20%;
+    margin-top: 0.2%;
+    cursor:pointer;
+    color: white;
+}
+
+#registrar p
+{
+    font-size: 35px;
+    background-color: transparent;
+    font-family: 'Oswald', sans-serif;
+    justify-content: center;
+}
+
+#registrar:hover{
+ 
+    background-color:#008db8 ;
+}
+
+#perfil{
+
+    width: 90px;
+    height: 90px;
+    background-color: rgb(40, 18, 238);
+    border: 1px solid black;
+    border-radius: 20px;
+    margin-left: 25%;
+    margin-top: 0.2%;
+    cursor:pointer;
+    color: white;
+}
+
+#perfil svg
+{
+    
+    background-color:transparent;
+    justify-content: center;
+}
+
+#perfil:hover{
+ 
+    background-color:#008db8;
+}
+
+#hr{
+    margin-top: 1%;
+    margin-left: 2%;
+    width: 96%;
+}
+
+#motivacion{
+    width: 50%;
+    margin-top: 4%;
+    margin-left: 23%;
+}
+
+#motivacion h3{
+    margin-bottom: 3%;
+    padding: 2%;
+    font-size: 50px;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Updock', cursive;
+}
+
+#motivacion img{
+    display: block;
+    margin: auto; 
+}
+
+#consejos{
+    width: 47%;
+    height: 40%;
+    margin-top: 6%;
+    margin-left: 26%;
+    border: 3px solid black;
+    border-radius: 10px;
+    background-color: #fafafa;
+}
+
+#consejos h4{
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    background-color: #fafafa;
+}
+
+#contenidoarriba{
+    display: flex;
+    background-color: #fafafa;
+}
+
+#arribaizquierda{
+    display: flex;
+    width: 40%;
+    margin-top: 1%;
+    margin-left: 5%;
+    background-color: #fafafa;
+}
+
+#nube
+{
+    margin-top: 1%;
+    background-color: #fafafa;
+}
+
+#arribaizquierda p{
+    font-size: 16px;
+    margin-left: 3%;
+    margin-top: 2%;
+    font-family: 'Oswald', sans-serif;
+    background-color: #fafafa;
+}
+
+#arribaderecha{
+    display: flex;
+    width: 40%;
+    margin-top: 1%;
+    margin-left: 10%;
+    background-color: #fafafa;
+}
+
+#estrella
+{
+    margin-top: 2%;
+    background-color: #fafafa;
+}
+
+#arribaderecha p{
+    font-size: 16px;
+    margin-left: 3%;
+    margin-top: 2%;
+    font-family: 'Oswald', sans-serif;
+    background-color: #fafafa;
+}
+
+#contenidoabajo{
+    margin-top: 5%;
+    background-color: #fafafa;
+}
+
+#abajo{
+    margin-left: 20%;
+    margin-bottom: 3%;
+    display: flex;
+    width: 60%;
+    background-color: #fafafa;
+}
+
+#abajo p{
+    font-size: 16px;
+    margin-left: 3%;
+    font-family: 'Oswald', sans-serif;
+    background-color: #fafafa;
+}
+
+#libro{
+    background-color: #fafafa;
+}
+
+.footer{
+    width: 100%;
+    height: 150px;
+    background-color: rgb(101, 83, 255);
+    margin-top: 5%;
+    display: flex;
+}
+
+#empresa{
+    background-color: rgb(101, 83, 255);
+    font-family: 'Oswald', sans-serif;
+    margin-left: 20%;
+    margin-top: 2%;
+    font-size: 20px;
+    
+}
+
+#contacto{
+    background-color: rgb(101, 83, 255);
+    margin-left: 15%;
+    margin-top: 2%;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+}
+
+#social{
+    background-color: rgb(101, 83, 255);
+    font-family: 'Oswald', sans-serif;
+    margin-left: 15%;
+    margin-top: 2%;
+    font-size: 20px; 
+}
+#social a{
+    background-color: rgb(101, 83, 255);
+
+}
+
+#iconoinsta{
+    background-color: rgb(101, 83, 255);
+    color: black;
+    
+}
+
+#iconotwitter{
+    background-color: rgb(101, 83, 255);
+    margin-left: 8%;
+    color: black;
+}
+
+#menulateral{
+    width: 15%;
+    height: 100%;
+    background-color: rgb(101, 83, 255);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    margin-top: -105px;
+}
+
+#menulateral p{
+    background-color: rgb(101, 83, 255);
+    /*margin-left: 30%;*/
+    margin-top: 22%;
+    /*margin-right: 25%;*/
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    cursor:pointer;
+    text-align: center;
+}
+
+#menulateral p:hover{
+    text-decoration: underline;
+}
+
+.hrlateral{
+    margin-top: 18%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#formularioregis
+{
+    width: 30%;
+    height: 460px;
+    background-color: rgb(101, 83, 255);
+    margin:auto;
+    position: absolute;
+    margin-top: -30%;
+    margin-left: 32%;
+    padding:20px 30px;
+    color:white;
+    border: 2px solid black;
+}
+
+#formularioregis h5
+{
+    margin:0;
+    text-align: center;
+    height: 40px;
+    border-bottom: white;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(101, 83, 255);
+}
+
+#formularioregis a
+{
+    background-color: transparent;
+    color: white;
+}
+
+#formularioregis p{
+    background-color: rgb(101, 83, 255);
+    text-align: center;
+    margin-top: 1%;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+
+#boton{
+    width: 25%;
+    margin-left: 37%;
+    height: 40px;
+    background-color: white;
+    margin-top:3%;
+}
+
+#botonvolver{
+    margin-left: 37%;
+    margin-top: 3%;
+    height: 40px;
+    background-color: white;
+    width: 25%;
+}
+
+#formularioinicio
+{
+    width: 30%;
+    height: 300px;
+    background-color: rgb(101, 83, 255);
+    margin:auto;
+    position: absolute;
+    margin-top: -30%;
+    margin-left: 32%;
+    padding:20px 30px;
+    color:white;
+    border: 2px solid black;
+}
+
+#formularioinicio h5
+{
+    margin:0;
+    text-align: center;
+    height: 40px;
+    border-bottom: white;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(101, 83, 255);
+}
+
+#formularioinicio a
+{
+    background-color: transparent;
+    color: white;
+}
+
+#formularioinicio p{
+    background-color: rgb(101, 83, 255);
+    text-align: center;
+    margin-top: 1%;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+
+#boton{
+    width: 25%;
+    margin-left: 37%;
+    height: 40px;
+    background-color: white;
+    margin-top:3%;
+}
+
+#botonvolver{
+    margin-left: 37%;
+    margin-top: 3%;
+    height: 40px;
+    background-color: white;
+    width: 25%;
+}
+
+.form{
+    width: 95%;
+    border: 1px solid white;
+    margin-bottom: 15px;
+    padding: 11px 10px;
+    background-color: white;
+    font-size: 14px;
+    font-weight: bold;
+    border: 1px solid black;
+}
+
+#tituloapuntes{
+    margin-left: 43%;
+    font-family: 'Oswald', sans-serif;
+    font-size: 300%;
+    color: rgb(101, 83, 255);
+    margin-top: 2%;
+}
+
+#apuntesbox{
+    background-color: transparent;
+    width: 100%;
+    height:20%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cajita:hover
+{
+    transform:scale(1.1);
+}
+
+.cajita
+{
+    width: 20%;
+    margin-left: 3.7%;
+    background-color: #d4d3d3;
+    border-radius: 10%;
+    border: 2px solid rgb(101, 83, 255);
+    margin-top: 5%;
+}
+
+.titulocaja
+{
+    font-family: 'Oswald', sans-serif; 
+    font-size: 190%;
+    text-align: center;
+    margin-top:2%;
+    background-color: transparent;
+}
+
+.imagencaja{
+    background-color: transparent;
+    height: 80%;
+    width: 80%;
+    border-radius: 5%;
+    margin-left: 10%;
+    margin-top: 6%;
+}
+
