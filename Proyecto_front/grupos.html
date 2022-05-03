@@ -19,17 +19,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Updock&display=swap" rel="stylesheet">
 </head>
 
-<body onload="iniciado()" id="body">
+<body onload="iniciado()">
     <div id="header">
-        <svg onclick="despliegueperfil()" id="aside" xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
-            class="bi bi-grip-horizontal" viewBox="0 0 16 16">
+        <svg onclick="desplieguegrupos()" id="aside" xmlns="http://www.w3.org/2000/svg" width="35" height="35"
+            fill="currentColor" class="bi bi-grip-horizontal" viewBox="0 0 16 16">
             <path
-             d="M2 8a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm0-3a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm3 3a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm0-3a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm3 3a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm0-3a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm3 3a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm0-3a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm3 3a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm0-3a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                d="M2 8a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm0-3a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm3 3a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm0-3a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm3 3a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm0-3a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm3 3a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm0-3a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm3 3a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm0-3a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
         </svg>
         <h1 id="logo" onclick="inicio()">NoteSite</h1>
-          <button id="cerrarsesionperfil"onclick="cerrarsesion()">
+        <input type="text" id="buscar"  placeholder="Buscar en NoteSite">
+        <svg onclick="busqueda()" id="lupa" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+            class="bi bi-search" viewBox="0 0 16 16">
+            <path
+                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+        </svg>
+        <button id="cerrarsesion" onclick="cerrarsesion()">
             <p>Cerrar sesión</p>
-        </button> 
+        </button>
+        <button id="perfil" onclick="verPerfil()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" fill="currentColor" class="bi bi-person-fill"
+                viewBox="0 0 16 16">
+                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+            </svg>
+        </button>
     </div>
 
     <div id="menulateral" style="display: none;">
@@ -40,38 +52,12 @@
         <p onclick="grupos()">Grupos</p>
         <hr class="hrlateral">
         <p onclick="explorar()">Explorar</p>
-       
+
     </div>
 
     <hr id="hr">
 
-    <div id="formulariomodificar">
-        <h5>MODIFICAR TU PERFIL</h5>
-        <input type="text" class="form" id="nombre" placeholder="Nombre">
-        <input type="text" class="form" id="apellidos" placeholder="Apellidos">
-        <input type="text" class="form" id="email" placeholder="Email">
-        <input type="password" class="form" id="contraseña" placeholder="Contraseña">
-        <input type="date" class="form" id="fechanac" placeholder="Fecha de nacimiento">
-        <select name="curso" id="formselectmod" placeholder="Curso">
-
-            <option disabled selected>Selecciona tu curso</option>
-
-            <option>1º ESO</option>
-
-            <option>2º ESO</option>
-
-            <option>3º ESO</option>
-
-            <option>4º ESO</option>
-
-            <option>1º Bachillerato</option>
-
-            <option>2º Bachillerato</option>
-
-        </select>
-        <button type="button" id="boton" onclick="modificarPerfil()">MODIFICAR</button>
-   
-    </div>
+    
 
     <footer id="footer">
         <p id="empresa">Notesite © 2022
@@ -97,5 +83,6 @@
         </p>
     </footer>
     <script src="scriptiniciar.js"></script>
-    </body>
-    </html>
+</body>
+
+</html>

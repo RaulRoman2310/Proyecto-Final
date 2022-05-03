@@ -27,8 +27,8 @@
                 d="M2 8a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm0-3a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm3 3a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm0-3a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm3 3a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm0-3a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm3 3a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm0-3a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm3 3a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm0-3a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
         </svg>
         <h1 id="logo" onclick="inicio()">NoteSite</h1>
-        <input type="text" id="buscar"  placeholder="Buscar en NoteSite">
-        <svg onclick="busquedaasig()" id="lupa" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+        <input type="text" id="buscar"  placeholder="Buscar más asignaturas">
+        <svg onclick="busquedaasig2()" id="lupa" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
             class="bi bi-search" viewBox="0 0 16 16">
             <path
                 d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
@@ -61,7 +61,7 @@
         <div id="tusasignaturas">
             <h3 id="tituloasignaturas">TUS ASIGNATURAS</h3>
             <div class="cajitaasignaturas" id="cajtaasignatura1">
-                <p id="cadaasig">HISTORIA DE ESPAÑA</p>
+                <p id="cadaasig" onclick="linkapuntes()">HISTORIA DE ESPAÑA</p>
                 <p >2º BACHILLERATO</p>
                 <svg xmlns="http://www.w3.org/2000/svg" class="papelera" width="30" height="30" fill="currentColor"
                     class="bi bi-trash" viewBox="0 0 16 16">
@@ -72,7 +72,7 @@
                 </svg>
             </div>
             <div class="cajitaasignaturas" id="cajtaasignatura2">
-                <p id="cadaasig">LENGUA</p>
+                <p id="cadaasig" onclick="linkapuntes()">LENGUA</p>
                 <p>2º BACHILLERATO</p>
                 <svg xmlns="http://www.w3.org/2000/svg" class="papelera" width="30" height="30" fill="currentColor"
                     class="bi bi-trash" viewBox="0 0 16 16">
@@ -83,7 +83,7 @@
                 </svg>
             </div>
             <div class="cajitaasignaturas" id="cajtaasignatura3">
-                <p id="cadaasig">BIOLOGÍA</p>
+                <p id="cadaasig" onclick="linkapuntes()">BIOLOGÍA</p>
                 <p>2º BACHILLERATO</p>
                 <svg xmlns="http://www.w3.org/2000/svg" class="papelera" width="30" height="30" fill="currentColor"
                     class="bi bi-trash" viewBox="0 0 16 16">
@@ -94,7 +94,7 @@
                 </svg>
             </div>
             <div class="cajitaasignaturas" id="cajtaasignatura4">
-                <p id="cadaasig">MATEMÁTICAS</p>
+                <p id="cadaasig" onclick="linkapuntes()">MATEMÁTICAS</p>
                 <p>2º BACHILLERATO</p>
                 <svg xmlns="http://www.w3.org/2000/svg" class="papelera" width="30" height="30" fill="currentColor"
                     class="bi bi-trash" viewBox="0 0 16 16">
@@ -105,7 +105,7 @@
                 </svg>
             </div>
             <div class="cajitaasignaturas" id="cajtaasignatura4">
-                <p id="cadaasig">TIC</p>
+                <p id="cadaasig" onclick="linkapuntes()">TIC</p>
                 <p>2º BACHILLERATO</p>
                 <svg xmlns="http://www.w3.org/2000/svg" class="papelera" width="30" height="30" fill="currentColor"
                     class="bi bi-trash" viewBox="0 0 16 16">
@@ -116,7 +116,7 @@
                 </svg>
             </div>
             <div class="cajitaasignaturas" id="cajtaasignatura5">
-                <p id="cadaasig">FÍSICA</p>
+                <p id="cadaasig" onclick="linkapuntes()">FÍSICA</p>
                 <p>2º BACHILLERATO</p>
                 <svg xmlns="http://www.w3.org/2000/svg" class="papelera" width="30" height="30" fill="currentColor"
                     class="bi bi-trash" viewBox="0 0 16 16">
@@ -134,42 +134,42 @@
                 <h3 id="añadirasignaturastitulo">AÑADIR ASIGNATURAS</h3>
             </div>
             <div class="cajitaasignaturasañadir" id="cajtaasignatura1">
-                <p id="cadaasig">IMAGEN Y SONIDO</p>
+                <p id="cadaasig" onclick="linkapuntes()">IMAGEN Y SONIDO</p>
                 <p >2º BACHILLERATO</p>
                 <svg xmlns="http://www.w3.org/2000/svg"  class="suma" width="40" height="40" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
                     <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
                   </svg>
             </div>
             <div class="cajitaasignaturasañadir" id="cajtaasignatura2">
-                <p id="cadaasig">MUSICA</p>
+                <p id="cadaasig" onclick="linkapuntes()">MUSICA</p>
                 <p>2º BACHILLERATO</p>
                 <svg xmlns="http://www.w3.org/2000/svg"  class="suma" width="40" height="40" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
                     <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
                   </svg>
             </div>
             <div class="cajitaasignaturasañadir" id="cajtaasignatura3">
-                <p id="cadaasig">QUÍMICA</p>
+                <p id="cadaasig" onclick="linkapuntes()">QUÍMICA</p>
                 <p>2º BACHILLERATO</p>
                 <svg xmlns="http://www.w3.org/2000/svg"  class="suma" width="40" height="40" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
                     <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
                   </svg>
             </div>
             <div class="cajitaasignaturasañadir" id="cajtaasignatura4">
-                <p id="cadaasig">DIBUJO TÉCNICO</p>
+                <p id="cadaasig" onclick="linkapuntes()">DIBUJO TÉCNICO</p>
                 <p>2º BACHILLERATO</p>
                 <svg xmlns="http://www.w3.org/2000/svg"  class="suma" width="40" height="40" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
                     <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
                   </svg>
             </div>
             <div class="cajitaasignaturasañadir" id="cajtaasignatura4">
-                <p id="cadaasig">ECONOMÍA</p>
+                <p id="cadaasig"onclick="linkapuntes()">ECONOMÍA</p>
                 <p>2º BACHILLERATO</p>
                 <svg xmlns="http://www.w3.org/2000/svg"  class="suma" width="40" height="40" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
                     <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
                   </svg>
             </div>
             <div class="cajitaasignaturasañadir" id="cajtaasignatura5">
-                <p id="cadaasig">HISTORIA DEL ARTE</p>
+                <p id="cadaasig" onclick="linkapuntes()">HISTORIA DEL ARTE</p>
                 <p>2º BACHILLERATO</p>
                 <svg xmlns="http://www.w3.org/2000/svg"  class="suma" width="40" height="40" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
                     <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
@@ -186,7 +186,7 @@
         </p>
         <p id="contacto">CONTACTO
             <br>
-            notesitefp@gmail.com
+            notesiteifp@gmail.com
         </p>
         <p id="social">REDES SOCIALES
             <br>

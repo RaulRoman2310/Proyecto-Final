@@ -27,7 +27,7 @@
                 d="M2 8a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm0-3a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm3 3a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm0-3a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm3 3a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm0-3a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm3 3a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm0-3a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm3 3a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm0-3a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
         </svg>
         <h1 id="logo" onclick="inicio()">NoteSite</h1>
-        <input type="text" id="buscar" placeholder="Buscar en explorar">
+        <input type="text" id="buscar" placeholder="Buscar en todos los apuntes">
         <svg onclick="busquedatodo()" id="lupa" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
             class="bi bi-search" viewBox="0 0 16 16">
             <path
@@ -57,11 +57,15 @@
 
     <hr id="hr">
     <div id="partetitulo">
-        <h3 id="titulotodosapuntes">TODOS LOS APUNTES</h3>
+        <h3 id="titulotodosapuntes">HISTORIA DE ESPAÑA</h3>
+        <p id="volver" onclick="volverAsig()" onmouseover="volverAsigOn()" onmouseout="volverAsigOut()">Volver atrás</p>
+        <svg id="volvericono" onclick="volverAsig()" onmouseover="volverAsignOnSvg()" onmouseout="volverAsigOutSvg()" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-90deg-left" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M1.146 4.854a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H12.5A2.5 2.5 0 0 1 15 6.5v8a.5.5 0 0 1-1 0v-8A1.5 1.5 0 0 0 12.5 5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4z"/>
+        </svg>
     </div>
     <div id="todosapuntes">
         <div id="tituloapuntestodo">
-            <h3>1ºESO</h3>
+            <h3>2ºBACH</h3>
         </div>
         <div class="apuntesmicajita">
             <div class="cajitatodo" id="cajita1">
@@ -175,121 +179,8 @@
                 </div>
             </div>
         </div>
-        <div id="tituloapuntestodo">
-            <h3>2ºESO</h3>
-        </div>
-        <div class="apuntesmicajita">
-            <div class="cajitatodo" id="cajita1">
-                <img src="isabel2.jpeg" class="imagencaja">
-                <div class="interior">
-                    <p class="titulocaja">HISTORIA 2ºBACH ISABEL II</p>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" class="downloadapuntes" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
-                        <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
-                        <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
-                      </svg>
-                </div>
-            </div>
-            <div class="cajitatodo" id="cajita2">
-                <img src="isabel2.jpeg" class="imagencaja">
-                <div class="interior">
-                    <p class="titulocaja">HISTORIA 2ºBACH ISABEL II</p>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" class="downloadapuntes" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
-                        <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
-                        <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
-                      </svg>
-                </div>
-            </div>
-            <div class="cajitatodo" id="cajita3">
-                <img src="isabel2.jpeg" class="imagencaja">
-                <div class="interior">
-                    <p class="titulocaja">HISTORIA 2ºBACH ISABEL II</p>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" class="downloadapuntes" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
-                        <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
-                        <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
-                      </svg>
-                </div>
-            </div>
-            <div class="cajitatodo" id="cajita4">
-                <img src="isabel2.jpeg" class="imagencaja">
-                <div class="interior">
-                    <p class="titulocaja">HISTORIA 2ºBACH ISABEL II</p>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" class="downloadapuntes" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
-                        <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
-                        <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
-                      </svg>
-                </div>
-            </div>
-            <div class="cajitatodo" id="cajita5">
-                <img src="isabel2.jpeg" class="imagencaja">
-                <div class="interior">
-                    <p class="titulocaja">HISTORIA 2ºBACH ISABEL II</p>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" class="downloadapuntes" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
-                        <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
-                        <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
-                      </svg>
-                </div>
-            </div>
-            <div class="cajitatodo" id="cajita6">
-                <img src="isabel2.jpeg" class="imagencaja">
-                <div class="interior">
-                    <p class="titulocaja">HISTORIA 2ºBACH ISABEL II</p>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" class="downloadapuntes" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
-                        <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
-                        <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
-                      </svg>
-                </div>
-            </div>
-            <div class="cajitatodo" id="cajita7">
-                <img src="isabel2.jpeg" class="imagencaja">
-                <div class="interior">
-                    <p class="titulocaja">HISTORIA 2ºBACH ISABEL II</p>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" class="downloadapuntes" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
-                        <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
-                        <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
-                      </svg>
-                </div>
-            </div>
-            <div class="cajitatodo" id="cajita8">
-                <img src="isabel2.jpeg" class="imagencaja">
-                <div class="interior">
-                    <p class="titulocaja">HISTORIA 2ºBACH ISABEL II</p>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" class="downloadapuntes" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
-                        <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
-                        <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
-                      </svg>
-                </div>
-            </div>
-            <div class="cajitatodo" id="cajita9">
-                <img src="isabel2.jpeg" class="imagencaja">
-                <div class="interior">
-                    <p class="titulocaja">HISTORIA 2ºBACH ISABEL II</p>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" class="downloadapuntes" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
-                        <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
-                        <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
-                      </svg>
-                </div>
-            </div>
-            <div class="cajitatodo" id="cajita10">
-                <img src="isabel2.jpeg" class="imagencaja">
-                <div class="interior">
-                    <p class="titulocaja">HISTORIA 2ºBACH ISABEL II</p>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" class="downloadapuntes" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
-                        <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
-                        <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
-                      </svg>
-                </div>
-            </div>
-            <div class="cajitatodo" id="cajita11">
-                <img src="isabel2.jpeg" class="imagencaja">
-                <div class="interior">
-                    <p class="titulocaja">HISTORIA 2ºBACH ISABEL II</p>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" class="downloadapuntes" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
-                        <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
-                        <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
-                      </svg>
-                </div>
-            </div>
-        </div>
+       
+    
         
     </div>
 
