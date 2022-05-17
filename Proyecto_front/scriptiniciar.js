@@ -1,6 +1,7 @@
 
 
 
+
 localStorage.getItem("flagsesion")
 var flaglateral = false;
 
@@ -15,7 +16,8 @@ function iniciado(){
         var perfil=document.getElementById("perfil");
         var motivacion = document.getElementById("motivacion");
         var consejos = document.getElementById("consejos"); 
-        var homeapuntes = document.getElementById("homeapuntes")
+        var homeapuntes = document.getElementById("homeapuntes");
+        var cerrarsesion=document.getElementById("cerrarsesion");
         
         registrar.style.display = "none";
         motivacion.style.display="none";
@@ -23,6 +25,7 @@ function iniciado(){
 
         perfil.style.display="block";
         homeapuntes.style.display="block";
+        cerrarsesion.style.display="block";
 
     }
     
@@ -644,3 +647,139 @@ function busquedaasig2(){
     }
 
 }
+
+function download(filename, text) {
+    var element = document.createElement('a');
+    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+    element.setAttribute('download', filename);
+
+    element.style.display = 'none';
+    document.body.appendChild(element);
+
+    element.click();
+
+    document.body.removeChild(element);
+}
+
+function descargar(){
+    var text = "esto es una prueba";
+    var filename = "hello.pdf";
+    
+    download(filename, text);
+}
+
+const dragArea= document.querySelector(".drag-area")
+const dragText=dragArea.querySelector('h2')
+const button=dragArea.querySelector('button')
+const input=dragArea.querySelector('#input-file')
+let files;
+
+
+button.addEventListener('click', e=>{
+    input.click();
+})
+
+input.addEventListener('change', (e)=> {
+    files =this.files
+    dragArea.classList.add("active");
+    showFiles(files);
+    dragArea.classList.remove('active')
+})
+
+dragArea.addEventListener("dragover", (e)=>{
+e.preventDefault();
+dragArea.classList.add("active")
+dragText.textContent="Suelta para subir los archivos"
+});
+
+dragArea.addEventListener("dragleave", (e)=>{
+    e.preventDefault();
+    dragArea.classList.remove("active")
+    dragText.textContent="Arrastra tus apuntes PDF"
+});
+
+dragArea.addEventListener("drop", (e)=>{
+    e.preventDefault();
+    files=e.dataTransfer.files;
+    showFiles(files)
+    dragArea.classList.remove("active")
+    dragText.textContent="Arrastra tus apuntes PDF"
+});
+
+function showFiles(file){
+if(files.length==undefined)
+{
+    processFile(files);
+}
+
+else{
+    for(const file of files)
+    processFile(file);
+}
+}
+
+function processFile(file){
+    debugger
+    const docType= file.type;
+    const validExtensions=['application/pdf']
+
+    if(validExtensions.includes(docType))
+    {
+        //archivo valido
+       /* const fileReader= new FileReader();
+        const id = `file-${Math.random().toString(32).substring(7)}`;
+        fileReader.addEventListener('load', e=>{
+            const fileUrl = fileReader.result;
+
+        })*/
+    
+    }
+    else{
+        //archivo no valido
+        alert("no es un archivo valido")
+    }
+}
+
+/*function uploadFile(file){
+    const formData = new FormData()
+    formData.append("file", file);
+
+    try{
+        const response=await fetch('http://localhost:3000/upload',{
+            method:"POST",
+            body:formData,
+        });
+
+        const responseText=await response.text();
+        console.log(responseText)
+
+
+        document.querySelector(`#${id} .status-text`).innerHTML = `<span class="success">Archivo subido correctamente...</span>`
+    }catch(error){
+        document.querySelector(`#${id} .status-text`).innerHTML = `<span class="failure">El archivo no pudo subirse correctamente...</span>`
+    }
+}*/
+
+//descarga de archivo un ejemplo
+/*function download(filename, text) {
+    var element = document.createElement('a');
+    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+    element.setAttribute('download', filename);
+
+    element.style.display = 'none';
+    document.body.appendChild(element);
+
+    element.click();
+
+    document.body.removeChild(element);
+}
+
+// Start file download.
+document.getElementById("dwn-btn").addEventListener("click", function(){
+    // Generate download of hello.txt file with some content
+    var text = document.getElementById("text-val").value;
+    var filename = "hello.txt";
+    
+    download(filename, text);
+}, false);*/
+

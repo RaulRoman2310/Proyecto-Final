@@ -766,7 +766,8 @@ color: rgb(21, 255, 0);
 
 #upload{
     color:rgb(101, 83, 255);
-    margin-left: 25%;
+    margin-left: 21%;
+    margin-right: 2%;
     margin-top: 3.5%;
 }
 
@@ -821,4 +822,44 @@ color: rgb(21, 255, 0);
     color:rgb(22, 255, 22); 
 }
 
+
+.drag-area{
+    border: 5px dashed rgb(101, 83, 255);
+    height:120px;
+    width: 300px;
+    border-radius: 10%;
+    margin-top: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 20%;
+    color:rgb(101, 83, 255);
+}
+
+.drag-area.active{
+
+    border:3px dashed #008db8;
+}
+
+.drag-area h2{
+    font-size: 25px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.drag-area span{
+    font-size: 25px;
+  color:rgb(101, 83, 255);
+  font-family: 'Oswald', sans-serif;
+}
+
+.drag-area button{
+    padding: 5px 5px;
+    font-size: 15px;
+    color: rgb(101, 83, 255);
+    border: 1px solid rgb(101, 83, 255);
+    outline: none;
+    cursor: pointer;
+    font-family: 'Oswald', sans-serif;
+}
 
